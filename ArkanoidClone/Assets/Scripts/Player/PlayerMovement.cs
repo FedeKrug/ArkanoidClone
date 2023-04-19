@@ -23,4 +23,12 @@ public class PlayerMovement : MonoBehaviour
 
 		transform.position = playerPos;
 	}
+
+	public void MoveWithButtons(int direction) //1 (right) || -1 (left)
+	{
+		Vector2 playerPos = transform.position;
+		playerPos.x = Mathf.Clamp(playerPos.x + direction * _movementSpeed * Time.deltaTime, -_bounds, _bounds);
+		transform.position = playerPos;
+	}
+	
 }
