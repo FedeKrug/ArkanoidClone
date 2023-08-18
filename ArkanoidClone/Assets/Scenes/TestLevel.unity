@@ -207,19 +207,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 117574564}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1986304563}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: DefineDirection
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &117574564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,9 +263,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1986304563}
-          m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-          m_MethodName: OnPointerDown
+        - m_Target: {fileID: 1986304564}
+          m_TargetAssemblyTypeName: MovementLeft, Assembly-CSharp
+          m_MethodName: OnInputDown
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -291,9 +279,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1986304563}
-          m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-          m_MethodName: OnPointerUp
+        - m_Target: {fileID: 1986304564}
+          m_TargetAssemblyTypeName: MovementLeft, Assembly-CSharp
+          m_MethodName: OnInputUp
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -949,19 +937,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 496885817}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1986304563}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: DefineDirection
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &496885817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1018,8 +994,8 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1986304563}
-          m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-          m_MethodName: OnPointerDown
+          m_TargetAssemblyTypeName: MovementRigth, Assembly-CSharp
+          m_MethodName: OnInputDown
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1034,8 +1010,8 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1986304563}
-          m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-          m_MethodName: OnPointerUp
+          m_TargetAssemblyTypeName: MovementRigth, Assembly-CSharp
+          m_MethodName: OnInputUp
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2016,6 +1992,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1986304562}
   - component: {fileID: 1986304563}
+  - component: {fileID: 1986304564}
   - component: {fileID: 1986304561}
   - component: {fileID: 1986304560}
   m_Layer: 0
@@ -2118,14 +2095,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1986304559}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6cd8f035c2dc944f995cdda1b47d806, type: 3}
+  m_Script: {fileID: 11500000, guid: eca3a994cbb1a484ba78a6fa2b04e00d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _movementSpeed: 3
-  _horizontalAxis: Horizontal
   _bounds: 1.45
   _isMoving: 0
-  _isMovingRigth: 0
+--- !u!114 &1986304564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986304559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 511d2d65bc72b974fa7a00ecb5fac571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _movementSpeed: 3
+  _bounds: 1.45
+  _isMoving: 0
 --- !u!1 &2058267222
 GameObject:
   m_ObjectHideFlags: 0
