@@ -1,34 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-	[SerializeField] private float _movementSpeed;
-	[SerializeField] private string _horizontalAxis;
+	[SerializeField] protected float _movementSpeed = 3;
 
-	[SerializeField] private float _bounds;
+	[SerializeField] protected float _bounds = 1.45f;
+	[SerializeField] protected bool _isMoving;
 
-	private void Update()
-	{
-		MovePlayer();
-	}
-
-	private void MovePlayer()
-	{
-		float moveInput = Input.GetAxisRaw(_horizontalAxis);
-
-		Vector2 playerPos = transform.position;
-		playerPos.x = Mathf.Clamp(playerPos.x + moveInput * _movementSpeed * Time.deltaTime, -_bounds, _bounds);
-
-		transform.position = playerPos;
-	}
-
-	public void MoveWithButtons(int direction) //1 (right) || -1 (left)
-	{
-		Vector2 playerPos = transform.position;
-		playerPos.x = Mathf.Clamp(playerPos.x + direction * _movementSpeed * Time.deltaTime, -_bounds, _bounds);
-		transform.position = playerPos;
-	}
 	
+
 }
