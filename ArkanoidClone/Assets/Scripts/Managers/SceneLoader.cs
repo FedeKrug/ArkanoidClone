@@ -23,9 +23,6 @@ namespace Game.Managers
 		{
 			Application.Quit();
 			Debug.Log("Game Exit");
-#if UNITY_EDITOR
-			//TODO: Quit the game in the editor
-#endif
 		}
 	}
 }
