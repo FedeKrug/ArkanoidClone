@@ -10,12 +10,12 @@ public class MovementLeft : PlayerMovement
 
 
 
-	public void Move() //1 (right) || -1 (left)
+	public void Move() 
 	{
 		if (!_isMoving) return;
 		Vector2 playerPos = transform.position;
 
-		playerPos.x = Mathf.Clamp(playerPos.x - 1/*direction*/ * _movementSpeed * Time.deltaTime, -_bounds, _bounds);
+		playerPos.x = Mathf.Clamp(playerPos.x - 1 * _movementSpeed * Time.deltaTime, -_bounds, _bounds);
 		transform.position = playerPos;
 	}
 
